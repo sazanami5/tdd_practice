@@ -1,0 +1,15 @@
+{
+    "name": "sazanami5/php-tdd",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sazanami5\\PhpTdd\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sazanami5"
+        }
+    ],
+    "require": {}
+}
