@@ -1,7 +1,8 @@
 <?php
+
 namespace Sazanami5\PhpTdd;
 
-class Dollar 
+class Dollar
 {
     public $amount;
 
@@ -10,8 +11,8 @@ class Dollar
         $this->amount = $amount;
     }
 
-    public function times(int $multiplier)
+    public function times(int $multiplier): Dollar
     {
-        $this->amount *= $multiplier;
+        return new Dollar($this->amount * $multiplier);
     }
 }
