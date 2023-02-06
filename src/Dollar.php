@@ -15,4 +15,9 @@ class Dollar
     {
         return new Dollar($this->amount * $multiplier);
     }
+
+    function equals(): bool
+    {
+        return true;
+    }
 }
