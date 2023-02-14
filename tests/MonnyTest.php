@@ -11,10 +11,8 @@ class MonnyTest extends TestCase
     public function testMultiplication() 
     {
         $five = new Dollar(5);
-        $product = $five->times(2);
-        $this->assertObjectEquals($product, new Dollar(10));
-        $product = $five->times(3);
-        $this->assertObjectEquals($product, new Dollar(15));
+        $this->assertObjectEquals($five->times(2), new Dollar(10));
+        $this->assertObjectEquals($five->times(3), new Dollar(15));
     }
 
     public function testEquality()
