@@ -12,9 +12,9 @@ class MonnyTest extends TestCase
     {
         $five = new Dollar(5);
         $product = $five->times(2);
-        $this->assertSame($product->amount, 10);
+        $this->assertObjectEquals($product, new Dollar(10));
         $product = $five->times(3);
-        $this->assertSame($product->amount,15);
+        $this->assertObjectEquals($product, new Dollar(15));
     }
 
     public function testEquality()
