@@ -4,7 +4,7 @@ namespace Sazanami5\PhpTdd;
 
 class Dollar
 {
-    public $amount;
+    private $amount;
 
     public function __construct(int $amount)
     {
