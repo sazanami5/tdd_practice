@@ -8,6 +8,7 @@ class Monny
 
     function equals(Monny $monny): bool
     {
-        return $this->amount == $monny->amount;
+        return $this->amount == $monny->amount
+        && $this instanceof $monny;
     }
 }
