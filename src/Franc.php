@@ -13,9 +13,4 @@ class Franc extends Monny
     {
         return new Franc($this->amount * $multiplier);
     }
-
-    function equals(Monny $monny): bool
-    {
-        return $this->amount == $monny->amount;
-    }
 }
