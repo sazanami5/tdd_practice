@@ -13,9 +13,4 @@ class Dollar extends Monny
     {
         return new Dollar($this->amount * $multiplier);
     }
-
-    function equals(Dollar $dollar): bool
-    {
-        return $this->amount == $dollar->amount;
-    }
 }

@@ -4,6 +4,10 @@ namespace Sazanami5\PhpTdd;
 
 class Monny
 {
-    private $amount;
-    
+    protected $amount;
+
+    function equals(Monny $monny): bool
+    {
+        return $this->amount == $monny->amount;
+    }
 }
