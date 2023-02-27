@@ -2,7 +2,7 @@
 
 namespace Sazanami5\PhpTdd;
 
-class Dollar
+class Dollar extends Monny
 {
     private $amount;
 
