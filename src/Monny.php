@@ -21,7 +21,7 @@ abstract class Monny
 
     public static function franc(int $amount): Monny
     {
-        return new Franc($amount);
+        return new Franc($amount, 'CHF');
     }
 
     public function currency(): string
