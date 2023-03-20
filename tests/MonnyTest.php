@@ -29,6 +29,11 @@ class MonnyTest extends TestCase
         $this->assertFalse((Monny::franc(5))->equals(Monny::franc(4)));
         $this->assertFalse((Monny::franc(5))->equals(Monny::dollar(5)));
     }
+    public function testCurrency()
+    {
+        $this->assertSame('USD', (Monny::dollar(1))->currency());
+        $this->assertSame('CHF', (Monny::franc(1))->currency());
+    }
 }
 
 
