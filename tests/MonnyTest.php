@@ -10,7 +10,7 @@ class MonnyTest extends TestCase
 {
     public function testMultiplication() 
     {
-        $five = new Dollar(5);
+        $five = Monny::dollar(5);
         $this->assertObjectEquals($five->times(2), new Dollar(10));
         $this->assertObjectEquals($five->times(3), new Dollar(15));
     }
