@@ -9,7 +9,7 @@ class Dollar extends Monny
         $this->amount = $amount;
     }
 
-    public function times(int $multiplier): Dollar
+    public function times(int $multiplier): Monny
     {
         return new Dollar($this->amount * $multiplier);
     }

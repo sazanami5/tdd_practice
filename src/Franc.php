@@ -9,7 +9,7 @@ class Franc extends Monny
         $this->amount = $amount;
     }
 
-    public function times(int $multiplier): Franc
+    public function times(int $multiplier): Monny
     {
         return new Franc($this->amount * $multiplier);
     }
