@@ -16,7 +16,7 @@ abstract class Monny
 
     public static function dollar(int $amount): Monny
     {
-        return new Dollar($amount);
+        return new Dollar($amount, 'USD');
     }
 
     public static function franc(int $amount): Monny
