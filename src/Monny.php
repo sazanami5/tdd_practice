@@ -2,9 +2,11 @@
 
 namespace Sazanami5\PhpTdd;
 
-class Monny
+abstract class Monny
 {
     protected $amount;
+    abstract public function times(int $multiplier): Monny;
+    abstract public function currency(): string;
 
     function equals(Monny $monny): bool
     {
