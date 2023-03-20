@@ -12,6 +12,6 @@ class Franc extends Monny
 
     public function times(int $multiplier): Monny
     {
-        return new Franc($this->amount * $multiplier, 'CHF');
+        return Monny::franc($this->amount * $multiplier);
     }
 }
