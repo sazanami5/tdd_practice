@@ -8,6 +8,12 @@ abstract class Monny
     protected $currency;
     abstract public function times(int $multiplier): Monny;
 
+    public function __construct(int $amount, string $currency)
+    {
+        $this->amount = $amount;
+        $this->currency = $currency; 
+    }
+    
     function equals(Monny $monny): bool
     {
         return $this->amount == $monny->amount
