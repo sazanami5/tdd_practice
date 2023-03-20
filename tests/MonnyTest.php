@@ -11,8 +11,8 @@ class MonnyTest extends TestCase
     public function testMultiplication() 
     {
         $five = Monny::dollar(5);
-        $this->assertObjectEquals($five->times(2), new Dollar(10));
-        $this->assertObjectEquals($five->times(3), new Dollar(15));
+        $this->assertObjectEquals($five->times(2), Monny::dollar(10));
+        $this->assertObjectEquals($five->times(3), Monny::dollar(15));
     }
     public function testFrancMultiplication() 
     {
@@ -23,11 +23,11 @@ class MonnyTest extends TestCase
 
     public function testEquality()
     {
-        $this->assertTrue((new Dollar(5))->equals(new Dollar(5)));
-        $this->assertFalse((new Dollar(5))->equals(new Dollar(4)));
+        $this->assertTrue((Monny::dollar(5))->equals(Monny::dollar(5)));
+        $this->assertFalse((Monny::dollar(5))->equals(Monny::dollar(4)));
         $this->assertTrue((new Franc(5))->equals(new Franc(5)));
         $this->assertFalse((new Franc(5))->equals(new Franc(4)));
-        $this->assertFalse((new Franc(5))->equals(new Dollar(5)));
+        $this->assertFalse((new Franc(5))->equals(Monny::dollar(5)));
     }
 }
 
