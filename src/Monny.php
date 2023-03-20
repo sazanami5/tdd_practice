@@ -33,4 +33,9 @@ class Monny
     {
         return $this->currency;
     }
+
+    public function times(int $multiplier): Monny
+    {
+        return new Monny($this->amount * $multiplier, $this->currency);
+    }
 }
