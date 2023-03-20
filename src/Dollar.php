@@ -6,6 +6,6 @@ class Dollar extends Monny
 {
     public function times(int $multiplier): Monny
     {
-        return Monny::dollar($this->amount * $multiplier);
+        return new Dollar($this->amount * $multiplier, $this->currency);
     }
 }
