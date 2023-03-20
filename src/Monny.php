@@ -16,4 +16,9 @@ class Monny
     {
         return new Dollar($amount);
     }
+
+    public static function franc(int $amount): Monny
+    {
+        return new Franc($amount);
+    }
 }
