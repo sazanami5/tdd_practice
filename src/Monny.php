@@ -12,7 +12,7 @@ class Monny
         && $this instanceof $monny;
     }
 
-    public static function dollar(int $amount): Dollar
+    public static function dollar(int $amount): Monny
     {
         return new Dollar($amount);
     }
