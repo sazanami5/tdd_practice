@@ -5,8 +5,8 @@ namespace Sazanami5\PhpTdd;
 abstract class Monny
 {
     protected $amount;
+    protected $currency;
     abstract public function times(int $multiplier): Monny;
-    abstract public function currency(): string;
 
     function equals(Monny $monny): bool
     {
@@ -22,5 +22,10 @@ abstract class Monny
     public static function franc(int $amount): Monny
     {
         return new Franc($amount);
+    }
+
+    public function currency(): string
+    {
+        return $this->currency;
     }
 }
