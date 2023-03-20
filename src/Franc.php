@@ -6,6 +6,6 @@ class Franc extends Monny
 {
     public function times(int $multiplier): Monny
     {
-        return new Franc($this->amount * $multiplier, $this->currency);
+        return new Monny($this->amount * $multiplier, $this->currency);
     }
 }

@@ -2,11 +2,10 @@
 
 namespace Sazanami5\PhpTdd;
 
-abstract class Monny
+class Monny
 {
     protected $amount;
     protected $currency;
-    abstract public function times(int $multiplier): Monny;
 
     public function __construct(int $amount, string $currency)
     {
