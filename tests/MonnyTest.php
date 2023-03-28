@@ -26,6 +26,12 @@ class MonnyTest extends TestCase
         $this->assertSame('USD', (Monny::dollar(1))->currency());
         $this->assertSame('CHF', (Monny::franc(1))->currency());
     }
+
+    public function testSimpleAddition()
+    {
+        $sum = (Monny::dollar(5))->plus(Monny::dollar(5));
+        $this->assertObjectEquals((Monny::dollar(10)), $sum);
+    }
 }
 
 
