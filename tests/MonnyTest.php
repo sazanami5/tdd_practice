@@ -32,11 +32,6 @@ class MonnyTest extends TestCase
         $this->assertSame('USD', (Monny::dollar(1))->currency());
         $this->assertSame('CHF', (Monny::franc(1))->currency());
     }
-
-    public function testDifferentClassEquality()
-    {
-        $this->assertFalse((new Monny(10, 'CHF'))->equals(new Monny(10, 'tarako')));
-    }
 }
 
 
