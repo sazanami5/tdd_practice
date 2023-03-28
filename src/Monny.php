@@ -16,7 +16,7 @@ class Monny
     function equals(Monny $monny): bool
     {
         return $this->amount == $monny->amount
-        && $this instanceof $monny;
+        && $this->currency === $monny->currency;
     }
 
     public static function dollar(int $amount): Monny

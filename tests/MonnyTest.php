@@ -37,7 +37,7 @@ class MonnyTest extends TestCase
 
     public function testDifferentClassEquality()
     {
-        $this->assertTrue((new Monny(10, 'CHF'))->equals(new Monny(10, 'tarako')));
+        $this->assertFalse((new Monny(10, 'CHF'))->equals(new Monny(10, 'tarako')));
     }
 }
 
