@@ -21,12 +21,12 @@ class Monny
 
     public static function dollar(int $amount): Monny
     {
-        return new Dollar($amount, 'USD');
+        return new Monny($amount, 'USD');
     }
 
     public static function franc(int $amount): Monny
     {
-        return new Franc($amount, 'CHF');
+        return new Monny($amount, 'CHF');
     }
 
     public function currency(): string
