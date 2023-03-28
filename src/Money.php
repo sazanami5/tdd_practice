@@ -13,10 +13,10 @@ class Money
         $this->currency = $currency; 
     }
     
-    public function equals(Money $Money): bool
+    public function equals(Money $money): bool
     {
-        return $this->amount == $Money->amount
-        && $this->currency === $Money->currency;
+        return $this->amount == $money->amount
+        && $this->currency === $money->currency;
     }
 
     public static function dollar(int $amount): Money
