@@ -13,7 +13,7 @@ class Monny
         $this->currency = $currency; 
     }
     
-    function equals(Monny $monny): bool
+    public function equals(Monny $monny): bool
     {
         return $this->amount == $monny->amount
         && $this->currency === $monny->currency;
