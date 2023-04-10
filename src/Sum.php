@@ -8,6 +8,11 @@ class Sum implements Expression
         readonly public Money $augend,
         readonly public Money $addend,
     ) {
+    }
 
+    public function reduce(string $to): Money
+    {
+        $amount = $this->augend->getAmount() + $this->addend->getAmount();
+        return new Money($amount, $to);
     }
 }

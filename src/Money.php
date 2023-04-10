@@ -43,4 +43,9 @@ class Money implements Expression
     {
         return new Sum($this, $addend);
     }
+
+    public function getAmount(): int
+    {
+       return $this->amount;
+    }
 }
