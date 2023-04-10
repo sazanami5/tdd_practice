@@ -2,7 +2,7 @@
 
 namespace Sazanami5\PhpTdd;
 
-class Money
+class Money implements Expression
 {
     protected $amount;
     protected $currency;
