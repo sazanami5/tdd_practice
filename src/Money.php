@@ -4,19 +4,16 @@ namespace Sazanami5\PhpTdd;
 
 class Money implements Expression
 {
-    protected $amount;
-    protected $currency;
-
-    public function __construct(int $amount, string $currency)
-    {
-        $this->amount = $amount;
-        $this->currency = $currency; 
+    public function __construct(
+        readonly public int $amount,
+        readonly public string $currency,
+    ) {
     }
-    
+
     public function equals(Money $money): bool
     {
         return $this->amount == $money->amount
-        && $this->currency === $money->currency;
+            && $this->currency === $money->currency;
     }
 
     public static function dollar(int $amount): Money
@@ -46,6 +43,6 @@ class Money implements Expression
 
     public function getAmount(): int
     {
-       return $this->amount;
+        return $this->amount;
     }
 }
