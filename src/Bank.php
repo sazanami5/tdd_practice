@@ -14,4 +14,12 @@ class Bank
         
     }
 
+    public function rate(string $from, string $to): int
+    {
+        $rate = 1;
+        if ($from === 'CHF' && $to === 'USD') {
+            $rate = 2;
+        }
+        return $rate;
+    }
 }
