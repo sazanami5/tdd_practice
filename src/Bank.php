@@ -4,7 +4,7 @@ namespace Sazanami5\PhpTdd;
 
 class Bank
 {
-    private array $rates;
+    private array $rates = [];
 
     public function reduce(Expression $source, string $to): Money
     {
@@ -18,10 +18,9 @@ class Bank
 
     public function rate(string $from, string $to): int
     {
-        $rate = 1;
-        if ($from === 'CHF' && $to === 'USD') {
-            $rate = 2;
+        if ($from === $to) {
+            return 1;
         }
-        return $rate;
+        return array_search(new Pair($from, $to), $this->rates);
     }
 }
