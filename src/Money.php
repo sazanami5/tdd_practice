@@ -31,7 +31,7 @@ class Money implements Expression
         return $this->currency;
     }
 
-    public function times(int $multiplier): Money
+    public function times(int $multiplier): Expression
     {
         return new Money($this->amount * $multiplier, $this->currency);
     }
